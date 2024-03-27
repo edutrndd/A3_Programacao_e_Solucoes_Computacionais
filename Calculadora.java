@@ -1,10 +1,18 @@
 public class Calculadora {
-    public static void main(String[] args) {
-        int i = 100;
-        do{
-            System.out.println(i);
-            i-- ; 
-        
-        } while (i >= 1); 
+    private double meuNumeroPref;
+
+    public Calculadora(double meuNumeroPref) {
+        this.meuNumeroPref = meuNumeroPref; 
+    }
+
+    double somar(double a, double b){
+        return a + b;
+    }
+    double subtrair(double a, double b){
+        return a - b;
+    }
+
+    public double somarComPreferido (double a){
+        return a + meuNumeroPref;
     }
 }
