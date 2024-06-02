@@ -1,0 +1,276 @@
+body {
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: Arial, sans-serif; /* Define a fonte principal como Arial ou sans-serif */
+    background: linear-gradient(135deg, #C183FF, #c4ffc9); /* Define um plano de fundo gradiente linear */
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza o conteúdo em colunas */
+    height: 100vh; /* Define a altura do corpo para ocupar 100% da altura da viewport */
+    justify-content: space-between; /* Distribui o espaço entre os elementos filhos */
+}
+
+.container {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    justify-content: flex-end; /* Alinha o conteúdo no final (à direita) do container */
+    align-items: center; /* Alinha o conteúdo ao centro verticalmente */
+    flex-grow: 1; /* Permite que o container cresça para ocupar o espaço disponível */
+    padding-right: 27%; /* Adiciona um preenchimento à direita do container */
+    position: relative; /* Define uma posição relativa para permitir o posicionamento absoluto de elementos filhos */
+}
+
+.animation-container {
+    position: absolute; /* Posiciona o container de animações de forma absoluta */
+    top: 0; /* Alinha o topo do container ao topo do elemento pai */
+    bottom: 0; /* Alinha a parte inferior do container à parte inferior do elemento pai */
+    left: 0; /* Alinha a esquerda do container à esquerda do elemento pai */
+    width: 100%; /* Define a largura do container para 100% do elemento pai */
+    overflow: hidden; /* Oculta qualquer conteúdo que extrapole o container */
+}
+
+.floating-shape {
+    position: absolute; /* Posiciona a forma de maneira absoluta dentro do container */
+    background: linear-gradient(145deg, #7D40FF, #89CFF0); /* Define um fundo gradiente linear para a forma */
+    border-radius: 50%; /* Arredonda as bordas da forma */
+    opacity: 0.8; /* Define a opacidade inicial da forma */
+    animation: float 5s infinite cubic-bezier(0.65, 0.05, 0.36, 1); /* Aplica a animação "float" com duração de 5 segundos, repetição infinita e uma curva de tempo personalizada */
+}
+
+/* Define estilos para diferentes formas flutuantes com tamanhos, posições e durações de animação específicos */
+.shape1 {
+    width: 120px;
+    height: 120px;
+    left: 20%;
+    bottom: -10%;
+    animation-duration: 7s;
+}
+
+.shape2 {
+    width: 110px;
+    height: 110px;
+    left: 30%;
+    bottom: -15%;
+    animation-duration: 5s;
+}
+
+.shape3 {
+    width: 130px;
+    height: 130px;
+    left: 10%;
+    bottom: -20%;
+    animation-duration: 6s;
+}
+
+.shape4 {
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    bottom: -5%;
+    animation-duration: 8s;
+}
+
+.shape5 {
+    width: 140px;
+    height: 140px;
+    left: 15%;
+    bottom: -25%;
+    animation-duration: 10s;
+}
+
+.shape6 {
+    width: 115px;
+    height: 115px;
+    left: 35%;
+    bottom: -30%;
+    animation-duration: 7.5s;
+}
+
+.shape7 {
+    width: 125px;
+    height: 125px;
+    left: 25%;
+    bottom: -35%;
+    animation-duration: 6.5s;
+}
+
+.shape8 {
+    width: 105px;
+    height: 105px;
+    left: 45%;
+    bottom: -40%;
+    animation-duration: 9s;
+}
+
+.shape9 {
+    width: 110px;
+    height: 110px;
+    left: 5%;
+    bottom: -30%;
+    animation-duration: 9.5s;
+}
+
+.shape10 {
+    width: 130px;
+    height: 130px;
+    left: 25%;
+    bottom: -35%;
+    animation-duration: 6.7s;
+}
+
+.shape11 {
+    width: 120px;
+    height: 120px;
+    left: 15%;
+    bottom: -20%;
+    animation-duration: 7.2s;
+}
+
+.shape12 {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    bottom: -40%;
+    animation-duration: 8.9s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0); /* Inicia a animação na posição original */
+        opacity: 0.8; /* Define a opacidade inicial */
+    }
+    50% {
+        opacity: 0.4; /* Reduz a opacidade no meio da animação */
+    }
+    100% {
+        transform: translateY(-100vh) translateX(25vw); /* Move a forma para fora da tela */
+        opacity: 0; /* Torna a forma completamente transparente no final da animação */
+    }
+}
+
+.form-box {
+    background: rgb(255 255 255 / 15%); /* Define um fundo semi-transparente */
+    padding: 80px; /* Adiciona preenchimento ao redor do conteúdo */
+    border-radius: 45px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%); /* Adiciona uma sombra ao redor do box */
+    width: 60%; /* Define a largura do box */
+    max-width: 650px; /* Define a largura máxima do box */
+}
+
+.form-box h2 {
+    font-size: 35px; /* Define o tamanho da fonte do título */
+    margin-top: 0; /* Remove a margem superior */
+    text-align: center; /* Centraliza o texto */
+}
+
+.form-row {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas, se necessário */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+.form-group {
+    flex: 1; /* Permite que o grupo de formulário cresça para ocupar o espaço disponível */
+    margin-right: 35px; /* Adiciona margem à direita */
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    align-items: center; /* Alinha o conteúdo ao centro verticalmente */
+    position: relative; /* Define uma posição relativa para permitir o posicionamento absoluto de elementos filhos */
+}
+
+.form-group i {
+    position: absolute; /* Posiciona o ícone de maneira absoluta */
+    left: 10px; /* Alinha à esquerda com 10px de margem */
+    top: 20px; /* Alinha ao topo com 20px de margem */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    color: #000; /* Define a cor do ícone */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove a margem à direita do último grupo de formulário */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: calc(100% - 40px); /* Define a largura dos campos de entrada */
+    padding: 10px 10px 10px 30px; /* Adiciona preenchimento ao redor do conteúdo */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+    border: 3px solid #fff; /* Define a borda branca */
+    border-radius: 15px; /* Arredonda as bordas */
+    background: rgb(255 255 255 / 40%); /* Define um fundo semi-transparente */
+    position: relative; /* Define uma posição relativa */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder,
+select::placeholder {
+    color: #333; /* Define a cor do placeholder */
+    transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1); /* Define uma transição suave para o placeholder */
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="number"]:focus::placeholder,
+select:focus::placeholder {
+    opacity: 0; /* Torna o placeholder transparente quando o campo está em foco */
+}
+
+label {
+    display: none; /* Oculta os rótulos dos campos de entrada */
+}
+
+.remember-label {
+    display: inline; /* Exibe o rótulo "Lembrar senha" */
+}
+
+button {
+    width: 50%; /* Define a largura do botão */
+    padding: 10px; /* Adiciona preenchimento ao redor do conteúdo */
+    margin: 20px auto 0; /* Adiciona margem superior e centraliza horizontalmente */
+    border: none; /* Remove a borda padrão */
+    border-radius: 15px; /* Arredonda as bordas */
+    background: linear-gradient(25deg, #D8A3FF, #B250FF, #D8A3FF); /* Define um fundo gradiente linear */
+    background-size: 200% 200%; /* Define o tamanho do fundo */
+    color: #fff; /* Define a cor do texto */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    font-size: 16px; /* Define o tamanho da fonte */
+    animation: pulse 3s infinite; /* Aplica a animação "pulse" com duração de 3 segundos e repetição infinita */
+}
+
+button:hover {
+    background-position: 100% 0; /* Move o fundo gradiente ao passar o mouse */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Define o tamanho inicial do botão */
+        background-position: 0 50%; /* Define a posição inicial do fundo gradiente */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta o botão no meio da animação */
+        background-position: 100% 50%; /* Move o fundo gradiente */
+    }
+    100% {
+        transform: scale(1); /* Retorna o botão ao tamanho original */
+        background-position: 0 50%; /* Retorna o fundo gradiente à posição inicial */
+    }
+}
+
+.remember-label {
+    margin-left: 5px; /* Adiciona margem à esquerda */
+    color: #333; /* Define a cor do texto */
+}
+
+#login-link {
+    color: #333; /* Define a cor do link de login */
+    text-decoration: none; /* Remove a sublinhado do link */
+    font-size: 16px; /* Define o tamanho da fonte */
+    z-index: 2; /* Define a posição z-index */
+}
+
+#login-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao link ao passar o mouse */
+}
