@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Importa o arquivo de ícones da font-awesome -->
+</head>
+<body>
+<div class="container">
+    <div class="animation-container">
+        <!-- Divs para criar formas animadas -->
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+        <div class="floating-shape shape4"></div>
+        <div class="floating-shape shape5"></div>
+        <div class="floating-shape shape6"></div>
+        <div class="floating-shape shape7"></div>
+        <div class="floating-shape shape8"></div>
+        <div class="floating-shape shape9"></div>
+        <div class="floating-shape shape10"></div>
+        <div class="floating-shape shape11"></div>
+        <div class="floating-shape shape12"></div>
+    </div>
+
+    <div class="form-box">
+        <h2>Cadastro</h2>
+        <form id="loginForm"> <!-- Formulário de cadastro -->
+
+            <!-- Divisão de linha para campos || Nome e Email-->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">name:</label>
+                    <i class="fas fa-user"></i> <!-- Ícone de usuário -->
+                    <input type="text" id="name" name="name" placeholder="Nome de usuário" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                </div>
+            </div>
+
+            <!-- Divisão de linha para campos || CPF, Idade, Gênero -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <i class="fas fa-id-card"></i> <!-- Ícone de cartão de identificação -->
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="idade">Idade:</label>
+                    <i class="fas fa-calendar-alt"></i> <!-- Ícone de calendário -->
+                    <input type="number" id="idade" name="idade" placeholder="Idade" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <i class="fas fa-venus-mars"></i> <!-- Ícone de gênero -->
+                    <select id="sexo" name="sexo" required> <!-- Dropdown para seleção de sexo -->
+                        <option value="" disabled selected>Sexo</option> <!-- Opção padrão desabilitada -->
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="O">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Divisão de linha para campos || Senha -->
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="senha">Senha:</label>
+                    <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua nova senha..." required>
+                </div>
+            </div>
+
+            <!-- Divisão de linha para campos || Confirme a senha -->
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="confirma-senha">Confirme a Senha:</label>
+                    <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
+                    <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirmar a senha..." required>
+                </div>
+            </div>
+
+            <!-- Divisão de linha para campos || Checkbox e login-link-->
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me" class="remember-label">Lembrar de mim</label>
+                </div>
+
+                <a href="../login/index.html" id="login-link">Logar</a> <!-- Link para página de login -->
+            </div>
+
+            <!-- Divisão de linha para botão de envio -->
+            <div class="form-row">
+                <button type="submit">Entrar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="assets/script.js"></script> <!-- Importa o arquivo de script -->
+
+</body>
+</html>
